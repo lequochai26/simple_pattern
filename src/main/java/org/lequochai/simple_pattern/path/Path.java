@@ -28,10 +28,10 @@ public class Path implements IPath {
         }
 
         // Not root case
-        this.add(node, root);
+        this.set(node, root);
     }
 
-    private void add(PathNode node, PathNode root) {
+    private void set(PathNode node, PathNode root) {
         // Get keys
         String nodeKey = node.getKey();
         String rootKey = root.getKey();
@@ -54,7 +54,7 @@ public class Path implements IPath {
             // Root's left node not null case
             else {
                 // Keep going
-                this.add(node, rootLeft);
+                this.set(node, rootLeft);
             }
         }
         // Right way case
@@ -70,7 +70,7 @@ public class Path implements IPath {
             // Root's right node not null case
             else {
                 // Keep going
-                this.add(node, rootRight);
+                this.set(node, rootRight);
             }
         }
         // Otherwise
