@@ -15,7 +15,7 @@ public class Path implements IPath {
 
     // METHODS:
     @Override
-    public void add(String key, Object value) {
+    public void set(String key, Object value) {
         // Create a new node
         PathNode node = new PathNode();
         node.setKey(key);
