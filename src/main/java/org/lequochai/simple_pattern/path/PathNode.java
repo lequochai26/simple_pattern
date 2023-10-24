@@ -19,6 +19,12 @@ public class PathNode {
     }
 
     // METHODS:
+    public int height() {
+        return Math.max(
+            (left != null ? left.height() : 0),
+            (right != null ? right.height() : 0)
+        )+1;
+    }
     public String getKey() {
         return key;
     }
