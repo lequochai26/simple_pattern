@@ -25,6 +25,35 @@ public class PathNode {
             (right != null ? right.height() : 0)
         )+1;
     }
+
+    public boolean isPath() {
+        return (left != null || right != null);
+    }
+
+    public boolean isUniPath() {
+        return (
+            (left != null && right == null)
+            ||
+            (right != null && left == null)
+        );
+    }
+
+    public PathNode getUniNode() {
+        return (
+            isUniPath()
+            ? (
+                (left != null)
+                ? left
+                : right
+            )
+            : null
+        );
+    }
+
+    public boolean isNode() {
+        return (left == null && right == null);
+    }
+
     public String getKey() {
         return key;
     }
