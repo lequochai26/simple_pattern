@@ -72,6 +72,15 @@ public class PathNode {
         }
     }
 
+    public void replaceNode(PathNode target, PathNode node) {
+        if (left == target) {
+            left = node;
+        }
+        else if (right == target) {
+            right = node;
+        }
+    }
+
     public String getKey() {
         return key;
     }
