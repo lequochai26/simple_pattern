@@ -54,6 +54,24 @@ public class PathNode {
         return (left == null && right == null);
     }
 
+    public void removeNode(PathNode node) {
+        if (node == left) {
+            left = null;
+        }
+        else if (node == right) {
+            right = null;
+        }
+    }
+
+    public void removeNode(String key) {
+        if (left.getKey().equals(key)) {
+            left = null;
+        }
+        else if (right.getKey().equals(key)) {
+            right = null;
+        }
+    }
+
     public String getKey() {
         return key;
     }
