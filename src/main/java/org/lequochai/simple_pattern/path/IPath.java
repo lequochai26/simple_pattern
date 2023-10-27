@@ -5,4 +5,7 @@ public interface IPath {
     void remove(String key);
     void clear();
     Object get(String key);
+    Object[] getAllValues();
+    String[] getAllKeys();
+    boolean exist(String key);
 }
